@@ -1,16 +1,14 @@
-import { info } from "../info";
 
-export const Character = () => {
-  const { name, status, gender, species, image } = info
+export const Character = (props) => {
+  const { name, status, species, gender, image } = props
 
   return(
     <section>
       <h2>{name}</h2>
-      <p>{status === 'Alive' ? 'Vivo' : 'Muerto'}</p>
-      <p>{gender === 'Male' ? 'Masculino' : 'Femenino'}</p>
+      <img src={image} alt={name} />
+      <p>{status}</p>
       <p>{species}</p>
-      <img src={image} alt="" />
-
+      <p>{gender}</p>
     </section>
   )
 }

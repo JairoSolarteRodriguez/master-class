@@ -1,10 +1,10 @@
-import {Character} from "./components/Character"
+import ListOfCharacters from "./components/ListOfCharacters"
 
 export const App = () => {
 
   return (
     <div>
-      <Character/>
+      <ListOfCharacters />
     </div>
   )
 }
