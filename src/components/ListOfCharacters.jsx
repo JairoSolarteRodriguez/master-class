@@ -29,7 +29,7 @@ const ListOfCharacters = () => {
       {page === 42 ? '' : <Button value='Next' action={next}/> }
       {
         characters.map(({ id, name, image, gender, species, status }) => (
-          <Character name={name} image={image} gender={gender} species={species} status={status} key={id}/>
+          <Character id={id} name={name} image={image} gender={gender} species={species} status={status} key={id}/>
         ))
       }
 
