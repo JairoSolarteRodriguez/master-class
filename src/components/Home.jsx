@@ -1,6 +1,6 @@
-const Home = () => {
+const Home = () =>{
   return(
-    <h1>Inicio</h1>
+    <h1>INICIO</h1>
   )
 }
 
