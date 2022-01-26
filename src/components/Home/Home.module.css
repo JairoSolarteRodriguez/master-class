@@ -1,0 +1,11 @@
+.content{
+  color: #313131;
+}
+
+.flex{
+  display: flex;
+  height: 82vh;
+  width: 100vw;
+  align-items: center;
+  justify-content: center;
+}
