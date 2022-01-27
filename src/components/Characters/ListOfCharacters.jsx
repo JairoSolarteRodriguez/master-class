@@ -35,8 +35,8 @@ const ListOfCharacters = () => {
       </div>
       <div className={style.flexContainer}>
         {
-          characters.map(({ id, name, image, gender, species, status }) => (
-            <Character id={id} name={name} image={image} gender={gender} species={species} status={status} key={id}/>
+          characters.map(({ id, name, image }) => (
+            <Character id={id} name={name} image={image} key={id}/>
           ))
         }
       </div>
