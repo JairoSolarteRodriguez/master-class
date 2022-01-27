@@ -17,7 +17,7 @@ export const App = () => {
         <Navbar />
         <Routes>
           <Route path='/' element={<Home />}/>
-          <Route path='characters' element={<ListOfCharacters />} />
+          <Route path='/characters' element={<ListOfCharacters />} />
           <Route path='/characters/:charId' element={<OneCharacter />} />
         </Routes>
       </Router>

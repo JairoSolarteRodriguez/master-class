@@ -1,6 +1,5 @@
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
-import { useState } from "react/cjs/react.development"
 import { getOne } from "../../services/getApi"
 import style from "./Character.module.css"
 

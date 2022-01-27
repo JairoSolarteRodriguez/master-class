@@ -9,7 +9,7 @@ import style from './Character.module.css'
 const ListOfCharacters = () => {
 
   const [ characters, setCharacters ] = useState([]);
-  const [ page, setPage ] = useState(localStorage.getItem('page'));
+  const [ page, setPage ] = useState(parseInt(localStorage.getItem('page')));
   
   useEffect(() =>{
     getAPI(page).then( async (character) => setCharacters(character))
