@@ -17,8 +17,8 @@ export const App = () => {
         <Navbar />
         <Routes>
           <Route exact path='/' element={<Home />}/>
-          <Route exact path='/characters' element={<ListOfCharacters />} />
-          <Route exact path='/characters/:charId' element={<OneCharacter />} />
+          <Route exact path='characters' element={<ListOfCharacters />} />
+          <Route exact path='characters/:charId' element={<OneCharacter />} />
         </Routes>
       </Router>
     </>
