@@ -30,21 +30,22 @@ const ListOfCharacters = () => {
     localStorage.setItem('page', parseInt(page) - 1)
   }
 
+  console.log(page)
+
   if(characters.length < 1) return <h1>Cargando...</h1>
 
   return(
     <section>
       <div className={style.containerButton}>
-        {page === 1 || page === '1' ? null : <Button value='Prev' action={prev}/> }
-        {page === 42 || page === '42' ? null : <Button value='Next' action={next}/> }
+        {page === 1 ? null : <Button value='Prev' action={prev}/> }
+        {page === 42 ? null : <Button value='Next' action={next}/> }
       </div>
       <div className={style.flexContainer}>
         {
-          characters.map(({ id, name, image, gender, species, status }) => (
-            <Character id={id} name={name} image={image} gender={gender} species={species} status={status} key={id}/>
+          characters.map(({ id, name, image }) => (
+            <Character id={id} name={name} image={image} key={id}/>
           ))
         }
-
       </div>
     </section>
   )

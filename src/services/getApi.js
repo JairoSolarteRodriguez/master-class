@@ -9,9 +9,9 @@ export const getAPI = async (page) => {
 
   const allResult = results.map( result => {
 
-    const { id, name, species, status, gender, image } = result
+    const { id, name, image } = result
 
-    return { id, name, species, status, gender, image }
+    return { id, name, image }
   })
 
   return allResult
