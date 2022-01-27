@@ -9,7 +9,7 @@ import style from './Character.module.css'
 const ListOfCharacters = () => {
 
   const [ characters, setCharacters ] = useState([]);
-  const [ page, setPage ] = useState();
+  const [ page, setPage ] = useState(1);
   
   useEffect(() =>{
     getAPI(page).then( async (character) => setCharacters(character))
@@ -24,6 +24,8 @@ const ListOfCharacters = () => {
     setCharacters([]);
     setPage(page - 1)
   }
+
+  console.log(page)
 
   if(characters.length < 1) return <h1>Cargando...</h1>
 
