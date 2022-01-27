@@ -1,30 +1,33 @@
 import { useState, useEffect } from 'react'
 import { getAPI } from "../../services/getApi"
-import { Character } from './Character';
-import Button from '../Button/Button';
+import { Character } from './Character'
+import Button from '../Button/Button'
 
 // Styles
 import style from './Character.module.css'
 
 const ListOfCharacters = () => {
 
-  const [ characters, setCharacters ] = useState([]);
-  const [ page, setPage ] = useState(localStorage.getItem('page'));
+  const [ characters, setCharacters ] = useState([])
+
+  const currentPage = isNaN(parseInt(localStorage.getItem('page'))) ? 1 : parseInt(localStorage.getItem('page'))
+
+  const [ page, setPage ] = useState(currentPage)
   
   useEffect(() =>{
     getAPI(page).then( async (character) => setCharacters(character))
   }, [ page ])
 
   const next = () =>{
-    setCharacters([]);
+    setCharacters([])
     setPage(parseInt(page) + 1)
-    localStorage.setItem('page', parseInt(page) + 1);
+    localStorage.setItem('page', parseInt(page) + 1)
   }
 
   const prev = () =>{
-    setCharacters([]);
+    setCharacters([])
     setPage(parseInt(page) - 1)
-    localStorage.setItem('page', parseInt(page) - 1);
+    localStorage.setItem('page', parseInt(page) - 1)
   }
 
   if(characters.length < 1) return <h1>Cargando...</h1>
